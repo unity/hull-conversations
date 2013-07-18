@@ -15,10 +15,11 @@ Hull.widget('conversation_form', {
   actions: {
     create: function(e, action) {
       e.preventDefault();
-      var formData = this.sandbox.dom.getFormData($('.newConvo'));
-      
+
+      var $form = this.$el.find('form');
+      var formData = this.sandbox.dom.getFormData($form);
       formData.public = true;
-      
+
       var url = this.options.id ? this.options.id : 'app';
       url += '/conversations';
       this.api(url, 'post', formData).then(_.bind(function(convo) {
