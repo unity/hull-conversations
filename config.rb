@@ -2,6 +2,7 @@ require "slim"
 require 'rack_environment'
 require 'lib/retina.rb'
 require 'lib/random-color.rb'
+# require 'handlebars_assets'
 
 # set :slim, :layout_engine => :slim
 set :css_dir, 'stylesheets'
@@ -25,6 +26,11 @@ helpers do
   require 'helpers/hull_helpers'
 end
 
+# HandlebarsAssets::Config.template_namespace = 'Hull.templates._default'
+
+# after_configuration do
+#   sprockets.append_path HandlebarsAssets.path
+# end
 
 # Build-specific configuration
 configure :build do

@@ -12,7 +12,8 @@ gem "sass", "~> 3.2.5"
 gem "compass", :git => "git://github.com/chriseppstein/compass.git", :tag => "v0.13.alpha.4"
 gem "sass-getunicode"
 gem "bootstrap-sass", "2.3.1.0"
-gem "handlebars_assets"
+# gem "handlebars_assets"
+
 
 # gem "libv8", "~> 3.11.8"
 gem "execjs"
