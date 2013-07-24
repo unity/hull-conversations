@@ -4,7 +4,6 @@ gem "rack-contrib"
 gem "rack-environment"
 gem "activesupport"
 
-gem "slim", "~> 1.3.9"
 gem "json", "~> 1.8.0"
 
 gem "animation" # css animation plugin

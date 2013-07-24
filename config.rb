@@ -1,4 +1,3 @@
-require "slim"
 require 'rack_environment'
 require 'lib/retina.rb'
 require 'lib/random-color.rb'
