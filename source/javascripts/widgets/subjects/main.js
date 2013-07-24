@@ -13,17 +13,14 @@ Hull.widget('subjects', {
     return data;
   },
   
-  chooseTopic: function(topic){
-
-  },
-
   actions: {
-    select: function(e, data) {
-      if(data.data.uid){
-        var id = '~'+btoa(data.data.uid);
+    select: function(e, action) {
+      if(action.data.uid){
+        var id = this.sandbox.util.entity.encode(action.data.uid);
       } else {
         var id='';
       }
+      this.$el.find('.conversations-subject').html(action.data.uid || "All Topics");
       this.sandbox.emit('hull.conversation.reload', id);
       this.sandbox.emit('hull.conversation.reset_form', id);
     }

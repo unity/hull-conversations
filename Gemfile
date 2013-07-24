@@ -23,6 +23,7 @@ gem "middleman"
 gem "middleman-sprockets"
 gem "middleman-smusher"
 gem "middleman-sync"
+gem "handlebars_assets", :git => "git://github.com/hull/handlebars_assets.git"
 
 group :development do
   gem "foreman"

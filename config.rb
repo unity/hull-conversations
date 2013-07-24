@@ -2,9 +2,8 @@ require "slim"
 require 'rack_environment'
 require 'lib/retina.rb'
 require 'lib/random-color.rb'
-# require 'handlebars_assets'
+require 'lib/handlebars'
 
-# set :slim, :layout_engine => :slim
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
@@ -21,16 +20,6 @@ if File.exist?('./config/environment.yml')
   re = RackEnvironment.new({})
   re.update_environment!
 end
-
-helpers do
-  require 'helpers/hull_helpers'
-end
-
-# HandlebarsAssets::Config.template_namespace = 'Hull.templates._default'
-
-# after_configuration do
-#   sprockets.append_path HandlebarsAssets.path
-# end
 
 # Build-specific configuration
 configure :build do

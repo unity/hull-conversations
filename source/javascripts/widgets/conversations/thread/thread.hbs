@@ -29,7 +29,6 @@
       </form>
     {{/if}}
 
-
       {{#if messages}}
         <ul class="media-list">
           {{#messages}}
@@ -38,7 +37,7 @@
                 <img class="avatar media-object" src="{{actor.picture}}" width="50" alt="{{actor.name}}">
               </div>
               <div class="media-body">
-                <small class="muted pull-right">{{formatTime updated_at "h:mm A"}}</small>
+                <small class="muted pull-right">{{fromNow created_at}}</small>
                 <h6 class="media-heading">
                   {{#if isNew}}
                     <small class="new_message">
@@ -60,7 +59,6 @@
           {{/messages}}
         </ul>
       {{/if}}
-
-      {{> conversations.thread.form}}
+      {{> conversations/thread/form}}
   {{/if}}
 {{/if}}
